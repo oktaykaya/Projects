@@ -1,0 +1,10 @@
+SVM sınıflandırma için yaratılmıştır
+
+verileri ayıran en iyi doğruyu öğrenmek
+
+marjini(uç noktaları) maximize eden
+hızlı ve veri saklama kapasitesi önemli
+
+paralelleşme algoritmalarında yer almaz
+
+marginin içinde veri kabul etmeyen svm ler hard-margin denir

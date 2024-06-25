@@ -1,0 +1,5 @@
+çekirdek gibi bir çember içine alınan verileri ayrımak için kullanılar yoldur.
+
+ortadaki verilerimizin tutup yukarıya veya aşağıya çekerek dışardaki verilerden ayırırız ve 3 boyutta düşünürsek ortadan bir doğru geçirerek ayırabiliriz bunuda svm ile yaparız. resime bakarak 2 boyut ve 3 boyut arasındaki farkı anlayabilirsin
+
+sigma değerleriyle alakalı bir durum tam anlamadım henüz

@@ -1,0 +1,51 @@
+koşullu olasılık A kesişim B 	
+
+gelir düzeyi şuysa bilgisayar alma ihtimali şudur diyebiliriz
+
+p(Yi|X) = p(X|Yi)P(Yi)/P(X)
+
+Y1:bilgisayar alanların ihtimali
+Y2:bilgisayar almayanların ihtimali bu ikisi koşul durumları bunları hesaplıycaz alanların ve almayanların oranları eşit değil yani dengesiz bir veri kümesi bunu normalize etmek gerekiyo yada bunu naive bayes bunu halledebiliyo
+
+* Naive Bayes dengesiz veri kümelerinde çalışabiliyo
+
+***Naive Bayes Çalışma Şekli***
+
+1- bilgisayar alma ve bilgisayar almama ihtimallerini ölçüyo
+alma : 9/14 : 0.643
+almama : 5/14 : 0.357
+
+30 un altında olup alma : 2/9 : 0.222
+30 un altında olup almama : 3/5 : 0.6
+
+her durum için bunlar hesaplanıyo
+
+yesleri kendi aralarında çarparız : a olsun
+no ları kendi aralarında çarparız : b olsun
+
+alma ihtimalini a ile almama ihtimalini b ile çarparız buna normalize etme deriz
+
+alma ve almama arasındaki fark 2 katıyken çarptığımızda 4 katına çıkar
+alma ihtimali artar almama ihtimali düşer
+
+0.044 * 0.643 : 0.028
+0.028 * 0.357 : 0.007
+
+lazy learning büyük veri kümelerinde ve karmaşık verrilerde kullanılması daha kolay olabiliyo early learning bunun altından kalkamayabiliyo ama küçük veri yapılarında da early learningler kullanılabiliyo.
+
+3 farklı bayes yöntemi var diyebiliriz
+
+Gaussian Naive Bayes:
+
+tahmin etmek istediğiniz veri continous bir değer ise yani reel sayılarda olabiliyosa ondalıklı sayılar olabiliyosa kullanılır
+
+Multinomial Naive Bayes : 
+
+nominal değerlerde kullanılır integer değerler alabiliyosa bu kullanılır yanı sayılabilir şeyler erkek kadın gibi daha çok da olabilir.
+
+Bernoulli Naive Bayes : 
+
+Binary nominalin 2li seçmesi gibi kadın erkek gibi.
+
+
+

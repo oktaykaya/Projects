@@ -1,0 +1,3 @@
+Microsoftun makalesi Real-Time Human Pose Recognition in Parts From Single Depth Images
+
+n_estimators = kaç ağaç oluşacak

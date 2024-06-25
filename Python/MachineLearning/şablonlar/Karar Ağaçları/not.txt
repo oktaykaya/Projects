@@ -1,0 +1,32 @@
+Bölgede çoğunluk hangi verideyse o bölgeye o veri denir yani mesela o bölgedeki 5 veriden 3 tanesi kadınsa o bölgeye kadın bölgesi denir
+
+Veya alandaki herkes kadın ve herkes erkek olana kadar alan bölünmeye devam eder
+çok fazla bölüm olursa overfitting olma riski var
+
+kararında bölmek lazım
+
+karar ağaçlarının çiziminde entropi diye bir kavram karşımıza çıkıyor
+
+karar ağacımızın ilk sorusu ne ile başlamalı sorusunu sorabilmek için entropi hesaplamamız gerekiyor.
+
+kolonlarımızın isimlerini age, income, student, credit_rating olduğunu varsayalım
+
+öncelikle Info(D) hesaplanır yani ulaşmak istediğmiz sonuç kaç kişi bilgisayar almış kaç kişi alamamış. bu = 0.940 çıktı
+
+sonra Info_age(D) hesaplanır = 0.694
+
+Gain(age) : 0.940 - 0.694 = 0.246 çıkar
+
+bunu bütün kolonlar için yaparız
+
+Gain(income) : 0.029
+Gain(student) : 0.151 
+Gain(credit_rating) : 0.048
+
+bu durumda en fazla gain veren age kolonu ile ağacımızı başlatmaya karar veririz çünkü bu bize verinin en iyi dağılım sonucunu verir. eğer sorumuzu sorduğumuzda sol tarafta 0 cevap olsa sağ tarafta 100 cevap olsa bu boşuna sorduğumuz bir soru olacaktır. yani en iyi eşit bölme durumunu hesaplıyoruz entropi ile ve entropisi en yüksek olanı en tepeye koyuyoruz.
+
+bu ID3 algoritması
+
+Default olarak gini kullanılır ama entropi de kullanılabilir eklersen aralarındaki fark formüldedir entropy logaritma kullanır gini kullanmaz çok fark etmez
+
+criterion = Default olarak gini kullanılır ama entropi de kullanılabilir eklersen aralarındaki fark formüldedir entropy logaritma kullanır gini kullanmaz

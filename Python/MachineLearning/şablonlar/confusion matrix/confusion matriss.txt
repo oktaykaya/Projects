@@ -1,0 +1,55 @@
+		tahmin
+
+gerçek	c1	yes		c2 no
+
+c1 yes	true positive		false negative
+            100			     5			105	
+  
+c2 no	false positive		true negative
+	    10			     50			60
+
+	    110			     55
+
+true positive: kanser olması ve kanser olduğunu bulmanız
+false negative : kanser olmaması ve kanser olduğunu bulmanız
+false positive : kanser olması ve kanser olduğunu bulamamanız
+true negative : kanser olmaması ve kanser olmadığını bulmanız
+
+true / total : ne kadar doğru sınıflandırdığını verir (accuracy) 	
+
+true olanlar bizim için doğru tahmin ettiklerimiz
+false olanlar bizim için yanlış tahmin ettiklerimiz
+
+bazı durumlarda sadece accuracy değeri bizim içi yeterli olmayabilir
+
+ACCURACY = tp + tn / total = 0.91
+Missclassification Rate(Error Rate) = fp + fn / total = 0.09
+Ture Positive Rate(Sensitivity veya Recall) = tp/actual yes(tp + fn) = 100 / 105 = 0.95
+False Positive Rate() = fp / actual no(fp + tn) = 10 / 60 = 0.17
+Specificity =  tn / actual no = 50 / 60 = 0.83
+precision = tp / predicted yes = 100 / 110 = 0.91
+prevalence = gerçekteki yes dağılım oranı : actual yes / total = 105 / 165 = 0.64 --> burası ne kadar 0.50 ye yakınsa o kadar eşit dağıtım demek dengeli demek 1 veya 0 a yaklaştıkça dengesi bozuldu demek
+
+biz doğru dedik ve yanlış çıktı bu type 1 hatası (FP)
+biz yanlış dedik ve doğru çıktı bu type 2 hatası (FN)
+
+Accuracy değeri yeterli olmayabiliyor.
+
+Bizim en düşük beceriye sahip algoritmamız ZeroR algoritmasıdır
+
+False negative değerini true positive
+
+true negative değerini false positive ekler ve öyle sınıflandırır
+
+böyle bi durumda accuracy değerimiz normalden daha fazla çıkabilir ama aslında yanlıştır bu yüzden accuracy sadece kendi başına yetmemektedir.
+
+biz bi algoritmanın başarılı olu olmadığını ölçmek için base olarark ZeroR kullanırız onu geçmeye çalışırız. min ZeroR
+
+Sadece Accuracy değerine bakma!!!
+
+fpr 0 ise hata yok demek
+
+Roc(Receiver Operating Characteristic) eğrisi : bazı algoritmaların bazı algoritmaları domine ettiği fikrini verir yani hangi algortimanın kullanılmasının gereksiz olduğunu söyler veya hangi algoritmanın hangi veri tipinde daha çok başarı vereceğini söyler.
+
+AUC : Az önce ROC ile çizdiğimiz eğriyi düşündüğümüzde o eğrinin altında kalan alana AUC denir
+ne kadar büyük bir alan ise bizim için o kadar iyi. çünkü en iyi değere ılaştğımızda en yüksek alanı verir yani TPR 100% ise.

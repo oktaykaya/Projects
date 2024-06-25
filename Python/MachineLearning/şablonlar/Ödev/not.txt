@@ -1,0 +1,10 @@
+ÖDEV
+
+irisi sınıflandırmak.
+veri kümemizde 3 tane sınıf var ve her sınıftan 50 tane örnek var.
+hangi algoritma daha başarılıdır.
+en başarılı yöntemi bul ve onun konfigirasyonu.
+R^2 değerlerinede bak başarı oranlarınada bak cm deki
+
+verilere göre algoritmaların karşılaştırılması
+https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html

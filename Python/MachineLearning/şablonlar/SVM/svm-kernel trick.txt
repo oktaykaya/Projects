@@ -1,0 +1,5 @@
+doğrusal olmayan çekirdek misali bir veri başka verilerin tam ortasında kalacak şekilde etrafı sarılmış ise bu algoritma kullanılır.
+
+tam ortasından tutup çekiyomuşuz gibi düşün bunu yapınca hamuru çekermiş gibi kesme noktası elde edeceğiz ve orda bir svm geçirdiğimiz zaman verileri diğer verilerden ayırmış olacağız
+
+ve bunu rbf kullanarak yapıyoruz

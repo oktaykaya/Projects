@@ -1,0 +1,32 @@
+en yakın 3 komşuya bak hangi komşusunun çeşidi fazlaysa onu seç. 
+
+boy ve kilo olarak düşündüğümüzde boyun 20 cm artması ile kilonun 20 kilo artması aynı oranda
+clasificationı etkilemediği için verinin komşulara olan uzaklığını ölçme algoritmalarında bir 
+çok farklı algoritma söz konusudur.
+
+lazy ve early olarak 2 çeşidi var.
+
+lazy : veri geldiğinde hangi komşunun yakın olduğunu ölçüyo
+
+early : veri sorulmadan önce hangi bölgeye geldiğinde hangi sınıfa gideceğini biliyo.
+
+knn non-linear problemleri çözmek için oldukça kullanışlıdır
+
+K neye göre seçilir ? :
+
+k = 1 seçildiği zaman küçük küçük mavi veya kırmızı adacıklar olma ihtimali çok yüksek
+
+ancak k değerini büyüttüğümüz zaman bu küçük adacıklar kaybolmaya başlayacaktır 
+
+eğer k değerini =n seçersek  o zaman mavi veya kırmızı verilerden birisi tüm alanı kaplayacaktır.
+
+k = 1 olma durumunda overfitting olma ihtimali var
+
+K nin formülü = (karekök)√(eğitim boyutu)/2 
+verimiz 100 ise yüzde 70 i eğitim verisi ise =  (√70)/2 = 4 olur k değeri
+
+
+K yı çift sayı alma durumunda eşitlikler oluşabiliyor mesela bir veri 2 tane maviye ve 2 tane 
+komşuya yakın mesafede o zaman bu veri kırmızı mı olcak mavi mi. bu durumda verilerin 
+uzaklıklarına bakılır veri mavilere mı daha yakın uzaklıkta kırmızılara mı hangisine yakınsa 
+ona gider ancak kodumuz mesafe ölçmüyosa o zaman k yı çift sayı almaktan kaçınmamız gerekicek. 
