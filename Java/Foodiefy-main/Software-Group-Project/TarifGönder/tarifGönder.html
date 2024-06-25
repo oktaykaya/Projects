@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tarifGönder.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Son Akşam Yemeği</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Eklemek istediğiniz özel stilleri burada tanımlayabilirsiniz. */
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar-üst">
+        <div class="logo">
+          <h2><a href="../index.html">Foodiefy</a></h2>
+        </div>
+  
+        <div class="arama-butonu">
+          <input type="text" class="tbox-search" />
+          <a class="büyüteç-ikon">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+
+        <div class="tarifilerim">
+          <a href="../Tariflerim/tariflerim.html">
+            <button class="tariflerim-button">
+              <i class="fa-solid fa-cookie-bite"></i>
+              Tariflerim
+            </button>
+          </a>
+        </div>
+  
+        <div class="tarif-gönder">
+          <a href="tarifGönder.html">
+            <button class="tarif-gönder-button">
+              <i class="fa-solid fa-cookie-bite"></i>
+              Tarif Gönder
+            </button>
+          </a>
+        </div>
+  
+        <div class="giriş">
+          <a href="../kayit.html">
+            <button class="giriş-button">
+              <i class="fa-solid fa-cookie-bite"></i>
+              Giriş yap veya Üye Ol
+            </button>
+          </a>
+        </div>
+      </div>
+  
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../logo.png" alt="Logo" style="width: 48px; height: 48px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Anasayfa</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                Kategoriler
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../Kahvaltı/kahvaltı.html">Kahvaltı</a>
+                <a class="dropdown-item" href="../AnaYemek/anayemek.html">Ana Yemek</a>
+                <a class="dropdown-item" href="../Corba/corba.html">Çorba</a>
+                <a class="dropdown-item" href="../Tatlılar/tatlılar.html">Tatlılar</a>
+                <a class="dropdown-item" href="../Aperatifler/aperatif.html">Aperatifler</a>
+                <a class="dropdown-item" href="../FitTarifler/fittarifler.html">Fit Tarifler</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Menuler/menu.html">Menüler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Populer/populer.html">Popüler</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+    </header>
+
+    <style>
+      .child_anasayfa > h1 {
+        text-align: center;
+      }
+      #recipesContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* İçerikler arasındaki boşluğu ayarlamak için margin kullanabilirsiniz */
+        /* margin: 10px; gibi bir değer girebilirsiniz */
+      }
+
+      .recipe-card {
+        height: 500px;
+        overflow: scroll;
+        background-color: rgb(224, 157, 157);
+        padding: 1em;
+        position: relative;
+      }
+      
+      .recipe-card::before{
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        content: "👇";
+        animation: pointDown 1s infinite;
+      }
+
+      @keyframes pointDown {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(10px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+      }
+
+      /* width */
+      .recipe-card::-webkit-scrollbar {
+        width: 0px;
+      }
+
+      /* Track */
+      .recipe-card::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      .recipe-card::-webkit-scrollbar-thumb {
+        background: rgb(123, 123, 123);
+        border-radius: 10px;
+      }
+
+      .recipe-card > img {
+        width: 100%;
+        height: 400px;
+      }
+
+      .recipe-card > iframe {
+        width: 100%;
+      }
+
+      .recipe-card {
+        /* İçerik kartlarının genişliğini belirleyebilirsiniz */
+
+        /* %33.33 genişliğinde kartlar ve 10px boşluk */
+        /* İçerik kartlarının yüksekliğini belirleyebilirsiniz */
+        /* height: 2000px; */
+
+        /* İstediğiniz yükseklik değerini girebilirsiniz */
+        /* Kartlar arasındaki boşluğu ayarlamak için margin kullanabilirsiniz */
+        /* margin: 10px; gibi bir değer girebilirsiniz */
+        /* Dilerseniz diğer stilleri de ekleyebilirsiniz */
+      }
+    </style>
+    <section id="anasayfa">
+      <div class="inner_anasayfa">
+        <div class="child_anasayfa">
+          <h1>Tarif Gönder</h1>
+          <div id="recipesContainer">
+
+            <div class="recipe-form" id="recipeForm">
+              
+              
+              <label for="recipeCategory">Yemek Kategorisi:</label>
+              <select id="recipeCategory" name="recipeCategory" required>
+                <option value="None">None</option>
+                <option value="Kahvalti">Kahvaltı</option>
+                <option value="AnaYemek">Ana Yemek</option>
+                <option value="Corba">Çorba</option>
+                <option value="Tatlilar">Tatlılar</option>
+                <option value="Aperatifler">Aperatifler</option>
+                <option value="FitTarifler">Fit Tarifler</option>
+              </select>
+              
+              <label for="recipeName">Tarifin Adı:</label>
+              <input type="text" id="recipeName" name="recipeName" required />
+              
+              <label for="recipeIngredients">İçindekiler:</label>
+              <textarea id="recipeIngredients" name="recipeIngredients" required></textarea>
+              
+              <div class="photo-inputs">
+                <label for="recipePhoto">Fotoğraf Ekleyin:</label>
+                <input type="file" id="recipePhoto" name="recipePhoto" accept="image/*" style="display: none;" />
+                
+                <div class="photo-buttons">
+                  <button type="button" class="buttonPhoto" onclick="takePhoto()">Fotoğraf Çek</button>
+                  <button type="button" class="buttonPhoto" onclick="uploadPhoto()">Fotoğraf Yükle</button>
+                </div>
+                
+                <div class="photo-preview">
+                  <img id="recipePhotoPreview" alt="Recipe Photo Preview" style="max-width: 100%; height: auto; display: none;">
+                </div>
+              </div>
+              
+              <div style="display: flex; justify-content: center;">
+                <button class="buttonPhoto" onclick="submitRecipe()">Tarifi Gönder </button>
+              </div>
+            </div>
+            
+            <div class="success-message" id="successMessage" style="display: none;">
+              <p>Tarif başarıyla gönderildi</p>
+              <button class="buttonPhoto" onclick="goToTarifGonderPage()">Başka bir tarif gönder</button>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+    <section id="foooter">
+      <div class="innerfooter">
+        <div class="innerfooter_child">
+          <p>Her hakkı saklıdır 2023 Foodiefy</p>
+        </div>
+      </div>
+    </section>
+    
+    <script> fetch('http://localhost:8080/category/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name: 'Kategori Adı' }),
+    })
+      .then(response => {
+        // Özel başlığı kontrol et
+        const myMessage = response.headers.get('My-Message');
+        console.log('My Message from backend:', myMessage);
+
+        // Yanıtın geri kalanını JSON olarak oku
+        return response.json();
+      })
+      .then(data => {
+        console.log('Data from backend:', data);
+        // Frontend'de çıktıyı kullanabilirsiniz
+
+        // Örneğin, bir HTML elementine mesajı ekleyebilirsiniz
+        const messageElement = document.createElement('p');
+        messageElement.textContent = myMessage;
+        document.body.appendChild(messageElement);
+      })
+      .catch(error => console.error('Error fetching data:', error));</script>
+    
+    <script src="tarifGönder.js"></script>
+    
+  </body>
+</html>

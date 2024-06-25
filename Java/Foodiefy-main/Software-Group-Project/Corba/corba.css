@@ -1,0 +1,326 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 100px 0;
+  background: rgb(255, 255, 255);
+}
+
+.section_title {
+  margin-bottom: 30px;
+}
+
+.section_title h2 {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  transition: all 0.5s ease-in-out;
+}
+
+.section_title h2:hover {
+  background-color: #24caac;
+}
+
+/* ---------------------- HEADER ----------------*/
+
+/* Güncellenmiş CSS Kodları */
+header {
+  background: rgb(44, 37, 37);
+  border-bottom: 1px solid rgba(238, 238, 238, 0.801);
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.navbar-üst {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px 0;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav_links li a {
+  margin: 10px 0;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  display: block; /* Mobilde dikey düzenleme için */
+  width: 100%; /* Tam genişlikte olması için */
+  box-sizing: border-box; /* Padding ve border'ı içeriğin genişliğine dahil etmek için */
+}
+
+.nav_links li a:hover {
+  background: #24caac;
+}
+
+.logo h2 a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.arama-butonu {
+  background-color: #24caac;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.tbox-search{
+  float: left;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  width: 0;
+  transition: .5s;
+}
+
+.büyüteç-ikon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+.arama-butonu:hover> .tbox-search{
+  width: 200px;
+}
+.arama-butonu::selection> .tbox-search{
+  width: 200px;
+}
+
+.tarif-gönder,
+.giriş,
+.tariflerim {
+  display: flex;
+  align-items: center; /* Mobilde dikey hizalama için */
+  flex-direction: column; /* Mobilde dikey düzenleme için */
+}
+
+.tarif-gönder-button,
+.giriş-button,
+.tariflerim-button {
+  background: orange;
+  border: 2px solid black;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  width: 100%; /* Tam genişlikte olması için */
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s linear;
+}
+
+.tarif-gönder-button:hover,
+.giriş-button:hover,
+.tariflerim-button:hover {
+  background: #24caac;
+}
+
+.tarif-gönder-button i,
+.giriş-button i,
+.tariflerim-button i {
+  float: left;
+  font-size: 20px;
+}
+
+
+
+/* ---------------------- Anasayfa ----------------*/
+
+.inner_anasayfa {
+  color: #fff;
+  padding: 80px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.child_anasayfa h1 {
+  font-size: 50px;
+  color: #24caac;
+}
+
+/* ---------------------- sporcu ----------------*/
+
+.innersporcular {
+  display: flex;
+  align-items: center;
+  /* divleri ortaladı*/
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+  color: #fff;
+}
+
+.innersporcular_child {
+  flex-basis: 45%;
+}
+
+.innersporcular_child h1 {
+  font-size: 50px;
+  color: #24caac;
+}
+
+/* ---------------------- footer ----------------*/
+
+.innerfooter,
+.innerfooter_child {
+  position: fixed;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+}
+
+/* ---------------------- Giriş ve Kayıt ----------------*/
+
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  padding-right: 20px;
+}
+
+label {
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background-color: #0056b3;
+}
+
+/* ---------------------- Navbar ----------------*/
+
+.navbar {
+  background-color: #f0f0f0;
+}
+
+.navbar-brand {
+  margin-left: 4%;
+}
+
+.navbar-toggler-icon {
+  background-color: #384147;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20%;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.dropdown-menu .dropdown-item:hover {
+  color: #384147;
+}
+
+/*-------------------- Kayit isim soyisim--------------------*/
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group-half {
+  flex: 1;
+  margin-right: 1px;
+  /* İsim ve soyisim arasındaki boşluğu ayarlayabilirsiniz */
+}
+
+.left {
+  margin-right: 5px;
+  /* İsim alanını sağa doğru kaydırabilirsiniz */
+}
+
+.right {
+  margin-left: 5px;
+  /* Soyisim alanını sola doğru kaydırabilirsiniz */
+}
+
+.recipesContainer {
+  border: 2px solid rgb(154, 110, 110)(255, 0, 0);
+}
