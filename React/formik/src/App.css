@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+.block{
+  display: block;
+}
+
+.error{
+  color: red;
+}
+.gender, .checkbox{
+  display:inline;
+  margin-top: 10px;
+}
+.radio, .checkbox{
+  padding-top: 10px;
+  padding-left: 10px;
+}
